@@ -1,0 +1,3 @@
+include requirements.txt
+recursive-include timeslator/templates *
+recursive-include timeslator/static *
