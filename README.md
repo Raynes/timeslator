@@ -8,6 +8,5 @@ times and humanish times. It's based on [Chronyk](https://github.com/KoffeinFlum
 ```
 http://ts.raynes.me/?input=10%20minutes%20ago
 http://ts.raynes.me/?input=10%20minutes%20ago&tz=8
-http://ts.raynes.me/?input=10%20minutes%20ago&
 http://ts.raynes.me/?input=10%20minutes%20ago&format=%Y-%m-%d&tz=8
 ```
