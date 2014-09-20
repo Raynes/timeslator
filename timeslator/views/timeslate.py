@@ -20,7 +20,10 @@ def timeslate():
         input_time = int(input_time)
     except ValueError:
         pass
-    sanitized = Chronyk(input_time)
+    try:
+        sanitized = Chronyk(input_time)
+    except:
+        return error("Timeslate does not accept this input format."), 500
     output = {'ctime': sanitized.ctime(timezone=tz),
               'timestring': sanitized.timestring(timezone=tz),
               'timestamp': sanitized.timestamp(timezone=tz),
