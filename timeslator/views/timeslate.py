@@ -21,13 +21,13 @@ def timeslate():
     except ValueError:
         pass
     try:
-        sanitized = Chronyk(input_time)
+        sanitized = Chronyk(input_time, timezone=tz)
     except:
         return error("Timeslate does not accept this input format."), 500
-    output = {'ctime': sanitized.ctime(timezone=tz),
-              'timestring': sanitized.timestring(timezone=tz),
-              'timestamp': sanitized.timestamp(timezone=tz),
+    output = {'ctime': sanitized.ctime(),
+              'timestring': sanitized.timestring(),
+              'timestamp': sanitized.timestamp(),
               'input': input_time}
     if output_format:
-        output['formatted'] = sanitized.timestring(output_format, timezone=tz)
+        output['formatted'] = sanitized.timestring(output_format)
     return json.dumps(output)
